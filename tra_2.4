@@ -1,0 +1,18 @@
+'''Syöte: Taulukko A[0,1,..,n-1], n >= 1 (n siis taulukon koko)
+Tuloste: Kääntää taulukon A alkiot päinvastaiseen järjestykseen'''
+
+
+def reverse(A,n):
+    print(A)
+    i = 0
+    while i< n/2:
+        temp = A[i]
+        A[i] = A[n-i-1]
+        A[n-i-1] = temp
+        i = i+1
+        print(A)
+    return
+    
+#virhe oli rivillä 2,     while i<= n/2:
+#parillisilla n arvoilla keskimmäiset kaksi arvoa jää väärään järjestykseen. 
+#korjataan vaihtamalla aitoon epäyhtälö
